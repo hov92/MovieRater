@@ -39,15 +39,15 @@ export class MainComponent implements OnInit {
     this.router.navigate(['/auth']);
   }
   selectMovie(movie: Movie) {
-    this.selectedMovie = movie as any;
+    this.selectedMovie = movie;
     this.editedMovie = null;
   }
   editMovie(movie: Movie) {
-    this.editedMovie = movie as any;
+    this.editedMovie = movie;
     this.selectedMovie = null;
   }
   createNewMovie() {
-    this.editedMovie = {title: '', description: ''} as any;
+    this.editedMovie = {title: '', description: ''};
     this.selectedMovie = null;
   }
   deletedMovie(movie: Movie) {

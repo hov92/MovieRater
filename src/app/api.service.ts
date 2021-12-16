@@ -42,12 +42,12 @@ export class ApiService {
     return this.httpClient.post(`${this.baseMovieUrl}${movieId}/rate_movie/`, body, {headers: this.getAuthHeaders()});
   }
 
-  loginUser(authData: any) {
+  loginUser(authData) {
     const body = JSON.stringify(authData);
     return this.httpClient.post(`${this.baseUrl}auth/`, body, {headers: this.headers});
   }
 
-  registerUser(authData: any) {
+  registerUser(authData) {
     const body = JSON.stringify(authData);
     return this.httpClient.post(`${this.baseUrl}api/users/`, body, {headers: this.headers});
   }
